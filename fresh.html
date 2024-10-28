@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEFORE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+
+
+    <div class="main-wrapper">
+        <div class="card-item">
+            <h1>Heading Here</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi, tempore odit natus, mollitia voluptates dolorum obcaecati dignissimos, optio iure deleniti cupiditate laborum. Blanditiis, eius error.</p>
+            <button>Link</button>
+        </div>
+    </div>
+    
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+        .main-wrapper {
+            width: 100%; height: 100vh; background-color: olivedrab; display: flex; align-items: center; justify-content: center;
+        }
+
+        .card-item {
+            width: 360px; height: 330px; background-color: rgb(0, 0, 0); padding: 20px;
+            display: flex; flex-direction: column; align-items: start; gap: 20px; color: white;
+            position: relative;
+        }
+
+        
+        .card-item h1 {
+            z-index: 1111111111111;
+        }
+
+        .card-item p {
+            z-index: 111111111111;
+        }
+
+
+        .card-item:before {
+            content: '';
+            background-image: url(fitness.jpg);
+            width: 100%; height: 100%;
+            background-size: cover;
+            position: absolute;
+            top: 0; left: 0;
+            opacity: 0;
+            transition: .5s linear;
+
+        }
+
+
+        .card-item:hover:before {
+            opacity: .5;
+            transition: .5s linear;
+        }
+
+        .card-item button {
+            padding: 12px 25px;
+            background-color: gold;
+            z-index: 111111111;
+        }
+    </style>
+
+
+
+
+</body>
+</html>
